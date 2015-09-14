@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tonic Form Test</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_name_label">First Name: </string>
+    <string name="last_name_label">Last Name: </string>
+    <string name="format_label">FORMAT</string>
+    <string name="firstname_lastname_om_label">firstname lastname</string>
+    <string name="lastname_firstname_om_label">lastname, firstname</string>
+    <string name="firstname_lastname_formatted">%1$s %2$s</string>
+    <string name="lastname_firstname_formatted">"%1$s, %2$s"</string>
+</resources>
