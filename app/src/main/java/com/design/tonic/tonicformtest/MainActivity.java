@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.PopupMenu;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         firstname = (EditText) findViewById(R.id.first_name_edittext);
+        // listen for changes to firstname and lastname edittext fields
         firstname.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -69,7 +69,11 @@ public class MainActivity extends AppCompatActivity {
         format_button.setEnabled(false);
     }
 
-
+    /**
+     * Popup menu to change format of fullname display.
+     *
+     * @param v view that displays the popup
+     */
     private void showPopup(View v) {
         PopupMenu popup = new PopupMenu(this, v);
         MenuInflater inflater = popup.getMenuInflater();
@@ -103,6 +107,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Format fullname based on user selection from popup menu
+     */
     private void setFullName() {
         switch (lastSelectedOption) {
             case R.id.firstname_lastname_menu_id:
